@@ -17,7 +17,17 @@ def generatePost():
         post['view'] = view
         data2.append(post)
 
-    print(data2)
+    # temp = 0
+    # for i in range(0, len(data2)):
+    #     for j in range(i + 1, len(data2)):
+    #         if data2[i]['view'] < data2[j]['view']:
+    #             temp = data2[i]
+    #             data2[i] = data2[j]
+    #             data2[j] = temp
+    # print(data2)
+    newlist = sorted(data2, key=lambda d: d['view'], reverse=True)
+    print(newlist)
+
 
 
 
